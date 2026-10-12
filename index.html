@@ -1,0 +1,145 @@
+Pesona Surya Travel
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesona Surya Travel</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #26352f;
+    }
+    header {
+      background: #075b46;
+      color: white;
+      text-align: center;
+      padding: 28px 16px;
+    }
+    header h1 { margin: 0 0 10px; }
+    header p { margin: 0; }
+    main {
+      max-width: 560px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 3px 14px #00000010;
+    }
+    h2 { color: #075b46; }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 7px;
+      border: 1px solid #ccd5d0;
+      border-radius: 8px;
+      font-size: 16px;
+      background: white;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      background: #087f5b;
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #68766f;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pesona Surya Travel</h1>
+    <p>Temukan perjalanan terbaik bersama kami</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Formulir Pemesanan</h2>
+      <p>Isi data berikut untuk menanyakan paket perjalanan.</p>
+
+      <form id="bookingForm">
+        <label for="nama">Nama lengkap</label>
+        <input id="nama" required placeholder="Nama Anda">
+
+        <label for="nomor">Nomor WhatsApp</label>
+        <input id="nomor" type="tel" required placeholder="08xxxxxxxxxx">
+
+        <label for="layanan">Pilih layanan</label>
+        <select id="layanan" required>
+          <option value="">Pilih layanan</option>
+          <option>Open Trip Bromo</option>
+          <option>Open Trip Tumpak Sewu</option>
+          <option>Open Trip Kawah Ijen</option>
+          <option>Private Trip</option>
+          <option>Transportasi / Sewa Mobil</option>
+          <option>Paket Wisata Custom</option>
+        </select>
+
+        <label for="asal">Lokasi penjemputan</label>
+        <input id="asal" required placeholder="Contoh: Bandara Juanda">
+
+        <label for="tujuan">Tujuan perjalanan</label>
+        <input id="tujuan" required placeholder="Tujuan Anda">
+
+        <label for="tanggal">Tanggal perjalanan</label>
+        <input id="tanggal" type="date" required>
+
+        <label for="jumlah">Jumlah peserta</label>
+        <input id="jumlah" type="number" min="1" required placeholder="Jumlah orang">
+
+        <label for="catatan">Catatan tambahan</label>
+        <textarea id="catatan" rows="3" placeholder="Permintaan khusus (opsional)"></textarea>
+
+        <button type="submit">Pesan melalui WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © Pesona Surya Travel · Perjalanan Anda, prioritas kami.
+  </footer>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nomorWhatsApp = "6281615970761";
+      const ambil = id => document.getElementById(id).value;
+
+      const pesan =
+        "Halo Pesona Surya Travel, saya ingin memesan perjalanan.%0A%0A" +
+        "Nama: " + encodeURIComponent(ambil("nama")) + "%0A" +
+        "No. WhatsApp: " + encodeURIComponent(ambil("nomor")) + "%0A" +
+        "Layanan: " + encodeURIComponent(ambil("layanan")) + "%0A" +
+        "Penjemputan: " + encodeURIComponent(ambil("asal")) + "%0A" +
+        "Tujuan: " + encodeURIComponent(ambil("tujuan")) + "%0A" +
+        "Tanggal: " + encodeURIComponent(ambil("tanggal")) + "%0A" +
+        "Jumlah peserta: " + encodeURIComponent(ambil("jumlah")) + "%0A" +
+        "Catatan: " + encodeURIComponent(ambil("catatan"));
+
+      window.open("https://wa.me/" + nomorWhatsApp + "?text=" + pesan, "_blank");
+    });
+  </script>
+</body>
+</html>
