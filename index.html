@@ -1,120 +1,145 @@
 Pesona Surya Travel
 
 <!DOCTYPE html>
-Jelajahi Jawa Timur dengan lebih mudah
-Open Trip • Private Trip • Transportasi
-PS
-Pesona Surya Travel
-YOUR JOURNEY, OUR PASSION
-☰ Menu
-DISCOVER EAST JAVA
-Perjalanan indah, kenangan berharga.
-Temukan keajaiban Bromo, air terjun Tumpak Sewu, Kawah Ijen, dan perjalanan nyaman bersama Pesona Surya Travel.
-Jelajahi Paket Wisata
-↗
-Konsultasi Perjalanan
-Perjalanan fleksibel
-Respon langsung via WhatsApp
-Trip privat & gabungan
-PILIHAN PERJALANAN
-Temukan petualanganmu
-Pilih destinasi favorit, lalu hubungi kami untuk mengecek jadwal, harga, dan ketersediaan terbaru.
-￼
-Favorit wisatawan
-Open Trip Bromo
-Nikmati panorama sunrise, lautan pasir, dan pengalaman jeep di kawasan Bromo.
-⏱ Sunrise trip / sesuai jadwal
-Pilih trip →
-￼
-Keindahan alam
-Open Trip Tumpak Sewu
-Jelajahi panorama air terjun yang megah dan lanskap hijau yang memukau.
-⏱ One day / sesuai jadwal
-Pilih trip →
-Petualangan
-Open Trip Kawah Ijen
-Rasakan suasana pendakian dini hari dan pemandangan kawah dari area yang diizinkan.
-⏱ Midnight trip / sesuai jadwal
-Pilih trip →
-TRAVEL WITH COMFORT
-Transportasi yang nyaman untuk perjalananmu
-Butuh kendaraan untuk liburan, perjalanan bisnis, atau penjemputan bandara? Ceritakan rencana perjalananmu, kami bantu mencarikan opsi yang sesuai dengan ketersediaan.
-✈
-Airport transfer
-Penjemputan dan pengantaran bandara sesuai pemesanan.
-↗
-Sewa kendaraan wisata
-Untuk city tour, perjalanan antarkota, dan wisata keluarga.
-◎
-Private trip & custom itinerary
-Rencana perjalanan dapat dikonsultasikan sesuai kebutuhan.
-Tanya Ketersediaan
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesona Surya Travel</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #26352f;
+    }
+    header {
+      background: #075b46;
+      color: white;
+      text-align: center;
+      padding: 28px 16px;
+    }
+    header h1 { margin: 0 0 10px; }
+    header p { margin: 0; }
+    main {
+      max-width: 560px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 3px 14px #00000010;
+    }
+    h2 { color: #075b46; }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 7px;
+      border: 1px solid #ccd5d0;
+      border-radius: 8px;
+      font-size: 16px;
+      background: white;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      background: #087f5b;
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #68766f;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pesona Surya Travel</h1>
+    <p>Temukan perjalanan terbaik bersama kami</p>
+  </header>
 
-KENAPA BERSAMA KAMI?
-Layanan yang berfokus pada perjalananmu
-Kami ingin membantu perjalananmu terasa lebih terencana dari awal sampai selesai.
-✦
-Rencana fleksibel
-Diskusikan destinasi, waktu, jumlah peserta, dan kebutuhan perjalananmu.
-☏
-Mudah berkonsultasi
-Detail permintaan dapat dikirim langsung melalui WhatsApp untuk ditindaklanjuti.
-⌖
-Fokus Jawa Timur
-Jelajahi pilihan destinasi dan transportasi untuk kebutuhan perjalanan di Jawa Timur.
-MULAI PERJALANANMU
-Ceritakan rencana perjalananmu.
-Isi formulir singkat ini. Website akan menyiapkan pesan pemesanan di WhatsApp agar kamu bisa melanjutkan konsultasi dengan tim Pesona Surya Travel.
-Belum tahu mau pilih paket apa?
-Pilih “Konsultasi perjalanan” dan tuliskan kebutuhanmu di kolom catatan.
-Formulir Pemesanan
-Kolom bertanda * wajib diisi.
-Nama lengkap *
+  <main>
+    <section class="card">
+      <h2>Formulir Pemesanan</h2>
+      <p>Isi data berikut untuk menanyakan paket perjalanan.</p>
 
-Nomor WhatsApp *
+      <form id="bookingForm">
+        <label for="nama">Nama lengkap</label>
+        <input id="nama" required placeholder="Nama Anda">
 
-Pilih layanan *
-                  Pilih layanan
-                  Open Trip Bromo
-                  Open Trip Tumpak Sewu
-                  Open Trip Kawah Ijen
-                  Sewa Transportasi
-                  Airport Transfer
-                  Private Trip / Custom Itinerary
-                  Konsultasi perjalanan
-                
-Lokasi penjemputan *
+        <label for="nomor">Nomor WhatsApp</label>
+        <input id="nomor" type="tel" required placeholder="08xxxxxxxxxx">
 
-Tujuan perjalanan *
+        <label for="layanan">Pilih layanan</label>
+        <select id="layanan" required>
+          <option value="">Pilih layanan</option>
+          <option>Open Trip Bromo</option>
+          <option>Open Trip Tumpak Sewu</option>
+          <option>Open Trip Kawah Ijen</option>
+          <option>Private Trip</option>
+          <option>Transportasi / Sewa Mobil</option>
+          <option>Paket Wisata Custom</option>
+        </select>
 
-Tanggal perjalanan *
-Jumlah peserta *
-Pilih jumlah1 orang2 orang3–4 orang5–7 orang8 orang atau lebih
-Catatan tambahan (opsional)
-Dengan menekan tombol, WhatsApp akan terbuka dengan detail permintaan Anda. Pemesanan belum terkonfirmasi sampai jadwal dan harga disepakati.
-Lanjutkan ke WhatsApp
-↗
-INFORMASI SINGKAT
-Pertanyaan yang sering ditanyakan
-Bagaimana cara memesan?
-Isi formulir, lalu lanjutkan ke WhatsApp. Tim akan membantu mengecek jadwal, harga, dan detail perjalanan.
-Apakah harga paket sudah tercantum?
-Harga dan ketersediaan dikonfirmasi melalui WhatsApp sesuai tanggal perjalanan, jumlah peserta, dan layanan yang dipilih.
-Bisakah meminta perjalanan privat?
-Bisa ditanyakan melalui formulir dengan memilih Private Trip / Custom Itinerary dan menuliskan rencana Anda.
-Siap merencanakan perjalanan?
-Hubungi Pesona Surya Travel untuk konsultasi kebutuhanmu.
-Mulai Pemesanan ↗
-PS
-Pesona Surya Travel
-YOUR JOURNEY, OUR PASSION
-Open trip, private trip, dan layanan transportasi untuk membantu perjalananmu di Jawa Timur.
-Jelajahi
-Paket Wisata
-Sewa Transportasi
-Formulir Pemesanan
-Informasi
-Jadwal, harga, fasilitas, dan ketersediaan dikonfirmasi sebelum pemesanan dinyatakan final.
-Konsultasi via WhatsApp
-© Pesona Surya Travel. All rights reserved.
-☏ Pesan via WhatsApp
+        <label for="asal">Lokasi penjemputan</label>
+        <input id="asal" required placeholder="Contoh: Bandara Juanda">
+
+        <label for="tujuan">Tujuan perjalanan</label>
+        <input id="tujuan" required placeholder="Tujuan Anda">
+
+        <label for="tanggal">Tanggal perjalanan</label>
+        <input id="tanggal" type="date" required>
+
+        <label for="jumlah">Jumlah peserta</label>
+        <input id="jumlah" type="number" min="1" required placeholder="Jumlah orang">
+
+        <label for="catatan">Catatan tambahan</label>
+        <textarea id="catatan" rows="3" placeholder="Permintaan khusus (opsional)"></textarea>
+
+        <button type="submit">Pesan melalui WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © Pesona Surya Travel · Perjalanan Anda, prioritas kami.
+  </footer>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nomorWhatsApp = "6281615970761";
+      const ambil = id => document.getElementById(id).value;
+
+      const pesan =
+        "Halo Pesona Surya Travel, saya ingin memesan perjalanan.%0A%0A" +
+        "Nama: " + encodeURIComponent(ambil("nama")) + "%0A" +
+        "No. WhatsApp: " + encodeURIComponent(ambil("nomor")) + "%0A" +
+        "Layanan: " + encodeURIComponent(ambil("layanan")) + "%0A" +
+        "Penjemputan: " + encodeURIComponent(ambil("asal")) + "%0A" +
+        "Tujuan: " + encodeURIComponent(ambil("tujuan")) + "%0A" +
+        "Tanggal: " + encodeURIComponent(ambil("tanggal")) + "%0A" +
+        "Jumlah peserta: " + encodeURIComponent(ambil("jumlah")) + "%0A" +
+        "Catatan: " + encodeURIComponent(ambil("catatan"));
+
+      window.open("https://wa.me/" + nomorWhatsApp + "?text=" + pesan, "_blank");
+    });
+  </script>
+</body>
+</html>
