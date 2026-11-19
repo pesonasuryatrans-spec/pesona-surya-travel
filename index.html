@@ -1,647 +1,304 @@
-EVERIA
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="EVERVIA adalah partner perjalanan dan transportasi di Indonesia. Private trip, international travel, transportasi, dokumentasi, corporate travel, dan partnership.">
-
-  <title>EVERVIA | Every Journey, A New Story</title>
+  <title>EVERVIA - Travel & Mobility Partner</title>
 
   <style>
     * {
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f7f8f6;
+      background: #f4f7f6;
       color: #26352f;
       line-height: 1.6;
     }
 
     header {
-      background: #102e27;
+      background: #075b46;
       color: white;
-      padding: 20px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      text-align: center;
+      padding: 35px 15px;
     }
 
-    .brand {
-      font-size: 27px;
-      font-weight: bold;
-      letter-spacing: 4px;
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 5px;
     }
 
-    .brand span {
-      color: #c9aa70;
+    header p {
+      color: #e8d4a8;
+      margin-bottom: 0;
     }
 
     nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
+      background: #064635;
+      padding: 14px;
+      text-align: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
+      margin: 0 10px;
       font-size: 14px;
     }
 
-    nav a:hover {
-      color: #c9aa70;
-    }
-
-    .hero {
-      min-height: 490px;
-      padding: 90px 8%;
-      background:
-        linear-gradient(#102e27b8, #102e27b8),
-        url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=85");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(38px, 6vw, 60px);
-      max-width: 750px;
-      line-height: 1.15;
-      margin: 0 0 15px;
-    }
-
-    .hero h1 span {
-      color: #d5b77d;
-    }
-
-    .hero p {
-      max-width: 620px;
-      font-size: 17px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #c9aa70;
-      color: #102e27;
-      padding: 13px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-      width: fit-content;
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 20px 15px;
     }
 
     section {
-      padding: 65px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .section-title h2,
-    .about h2 {
-      color: #102e27;
-      font-size: 30px;
-    }
-
-    .section-title p {
-      color: #68766f;
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .about {
-      text-align: center;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(230px, 1fr)
-      );
-      gap: 20px;
-    }
-
-    .card {
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 15px #0000000c;
-      border: 1px solid #edf0ed;
+      padding: 24px;
+      margin: 20px 0;
+      border-radius: 10px;
     }
 
-    .card h3 {
+    h2 {
       color: #075b46;
-      margin-top: 0;
     }
 
-    .card p {
-      color: #68766f;
-      font-size: 14px;
+    .service {
+      border-bottom: 1px solid #e5eae7;
+      padding: 12px 0;
     }
 
-    .audience {
-      background: #eaf0ec;
-    }
-
-    .audience .card {
-      border-top: 3px solid #c9aa70;
-    }
-
-    .highlight {
-      background: #102e27;
-      color: white;
-      text-align: center;
-    }
-
-    .highlight h2 {
-      color: #d5b77d;
-      font-size: 30px;
-    }
-
-    .highlight p {
-      max-width: 750px;
-      margin: auto;
-    }
-
-    .booking {
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .booking .card {
-      padding: 30px;
+    .service:last-child {
+      border-bottom: none;
     }
 
     label {
       display: block;
-      margin-top: 15px;
+      margin-top: 14px;
       font-weight: bold;
-      font-size: 14px;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 13px;
-      margin-top: 7px;
+      padding: 12px;
+      margin-top: 6px;
       border: 1px solid #ccd5d0;
       border-radius: 7px;
-      font-size: 15px;
+      font-size: 16px;
       background: white;
-      font-family: inherit;
     }
 
     button {
       width: 100%;
-      padding: 15px;
-      margin-top: 22px;
+      padding: 14px;
+      margin-top: 20px;
       background: #087f5b;
       color: white;
-      border: 0;
+      border: none;
       border-radius: 7px;
       font-size: 16px;
       font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #075b46;
     }
 
     footer {
-      background: #102e27;
+      background: #075b46;
       color: white;
       text-align: center;
-      padding: 30px 15px;
+      padding: 25px 15px;
       font-size: 13px;
-    }
-
-    footer .brand span {
-      color: #d5b77d;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        justify-content: center;
-        text-align: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 12px;
-      }
-
-      .hero {
-        padding: 75px 7%;
-      }
-
-      section {
-        padding: 50px 6%;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header>
-    <div class="brand">EVER<span>VIA</span></div>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#partner">Partnership</a>
-      <a href="#booking">Booking</a>
-    </nav>
+    <h1>EVERVIA</h1>
+    <p>Every Journey, A New Story.</p>
+    <p>Your Travel & Mobility Partner in Indonesia.</p>
   </header>
 
-  <!-- HERO -->
-  <div class="hero" id="home">
-    <h1>
-      Every Journey,<br>
-      <span>A New Story.</span>
-    </h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#market">Our Clients</a>
+    <a href="#booking">Booking</a>
+  </nav>
 
-    <p>
-      Discover Indonesia your way.
-      From personal journeys and private tours
-      to transportation and travel solutions
-      designed around your needs.
-    </p>
+  <main>
 
-    <a href="#booking" class="btn">
-      Plan Your Journey
-    </a>
-  </div>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about">
+    <section id="about">
       <h2>Welcome to EVERVIA</h2>
 
       <p>
         EVERVIA adalah partner perjalanan dan
-        transportasi yang menghadirkan pengalaman
-        menjelajahi Indonesia dengan lebih personal,
-        nyaman, dan fleksibel.
+        transportasi yang membantu Anda menjelajahi
+        Indonesia dengan nyaman, fleksibel, dan personal.
       </p>
 
       <p>
-        Kami membantu individu, pasangan, keluarga,
-        wisatawan asing, content creator, hingga
-        perusahaan merencanakan perjalanan sesuai
-        kebutuhan mereka.
+        From personal holidays to business travel,
+        we create journeys that fit your needs.
       </p>
+    </section>
 
-      <p>
-        Whether you travel for adventure, relaxation,
-        business, or meaningful experiences,
-        EVERVIA is here to make your journey memorable.
-      </p>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="section-title">
+    <section id="services">
       <h2>Our Services</h2>
-      <p>
-        Flexible travel and mobility solutions
-        for every kind of journey.
-      </p>
-    </div>
 
-    <div class="grid">
-
-      <div class="card">
+      <div class="service">
         <h3>Private Trip & Tour</h3>
-        <p>
-          Perjalanan wisata personal untuk individu,
-          pasangan, keluarga, dan kelompok kecil.
-          Itinerary dapat disesuaikan dengan kebutuhan.
-        </p>
+        <p>Perjalanan pribadi untuk individu, pasangan, keluarga, dan kelompok.</p>
       </div>
 
-      <div class="card">
+      <div class="service">
         <h3>Indonesia Travel Experience</h3>
-        <p>
-          Membantu wisatawan asing menjelajahi
-          destinasi Indonesia melalui perjalanan
-          yang nyaman, terencana, dan berkesan.
-        </p>
+        <p>Membantu wisatawan asing menjelajahi destinasi dan budaya Indonesia.</p>
       </div>
 
-      <div class="card">
+      <div class="service">
         <h3>Transportation Service</h3>
-        <p>
-          Layanan transportasi dan sewa kendaraan
-          untuk wisata, perjalanan bisnis,
-          penjemputan, dan kebutuhan lainnya.
-        </p>
+        <p>Transportasi dan sewa kendaraan untuk wisata maupun perjalanan bisnis.</p>
       </div>
 
-      <div class="card">
+      <div class="service">
         <h3>Travel Documentation</h3>
-        <p>
-          Layanan dokumentasi perjalanan untuk
-          content creator dan traveler, termasuk
-          kebutuhan foto maupun video.
-        </p>
+        <p>Layanan dokumentasi foto dan video untuk traveler dan content creator.</p>
       </div>
 
-      <div class="card">
+      <div class="service">
         <h3>Corporate Travel & Outing</h3>
-        <p>
-          Solusi transportasi, outing perusahaan,
-          perjalanan bisnis, dan perjalanan kelompok.
-        </p>
+        <p>Transportasi, outing perusahaan, dan perjalanan kelompok.</p>
       </div>
 
-      <div class="card">
+      <div class="service">
         <h3>Custom Travel Arrangement</h3>
-        <p>
-          Perencanaan perjalanan khusus berdasarkan
-          destinasi, waktu, anggaran, dan pengalaman
-          yang diinginkan pelanggan.
-        </p>
+        <p>Perjalanan khusus berdasarkan tujuan, waktu, dan anggaran pelanggan.</p>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- TARGET MARKET -->
-  <section class="audience">
-    <div class="section-title">
+    <section id="market">
       <h2>Who We Serve</h2>
+
+      <ul>
+        <li>Wisatawan lokal yang membutuhkan private trip.</li>
+        <li>Wisatawan asing yang ingin menjelajahi Indonesia.</li>
+        <li>Pasangan dan keluarga.</li>
+        <li>Content creator dan traveler.</li>
+        <li>Perusahaan dan kelompok bisnis.</li>
+        <li>Hotel dan agen perjalanan.</li>
+      </ul>
+
+      <h3>Business Partnership</h3>
       <p>
-        We create travel solutions for different
-        travelers and business needs.
+        Kami terbuka untuk kerja sama dengan hotel,
+        travel agent, tour operator, perusahaan,
+        dan mitra perjalanan lainnya.
       </p>
-    </div>
+    </section>
 
-    <div class="grid">
-
-      <div class="card">
-        <h3>Local Travelers</h3>
-        <p>
-          Wisatawan lokal yang menginginkan
-          perjalanan private, fleksibel, dan personal.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>International Travelers</h3>
-        <p>
-          Wisatawan mancanegara yang ingin mengenal
-          keindahan alam, budaya, dan destinasi Indonesia.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Couples & Families</h3>
-        <p>
-          Pasangan dan keluarga yang membutuhkan
-          perjalanan nyaman dengan pengalaman khusus.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Content Creators</h3>
-        <p>
-          Creator dan traveler yang membutuhkan
-          transportasi serta dukungan dokumentasi.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Corporate Clients</h3>
-        <p>
-          Perusahaan yang membutuhkan transportasi,
-          outing, perjalanan bisnis, dan layanan kelompok.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Travel & Hospitality Partners</h3>
-        <p>
-          Hotel dan agen perjalanan yang membutuhkan
-          partner operasional untuk transportasi
-          maupun layanan perjalanan.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PARTNERSHIP -->
-  <section class="highlight" id="partner">
-    <h2>Let's Grow Together</h2>
-
-    <p>
-      Kami terbuka untuk bekerja sama dengan hotel,
-      travel agent, tour operator, perusahaan,
-      content creator, dan mitra bisnis lainnya.
-      Mari membangun kerja sama yang saling
-      menguntungkan melalui layanan perjalanan
-      dan transportasi yang terpercaya.
-    </p>
-
-    <a href="#booking" class="btn">
-      Become Our Partner
-    </a>
-  </section>
-
-  <!-- BOOKING -->
-  <section id="booking">
-    <div class="section-title">
-      <h2>Plan Your Journey with EVERVIA</h2>
+    <section id="booking">
+      <h2>Plan Your Journey</h2>
 
       <p>
-        Ceritakan kebutuhan perjalanan Anda.
-        Tim kami siap membantu merencanakan
-        perjalanan yang tepat.
+        Isi formulir berikut untuk menghubungi tim EVERVIA.
       </p>
-    </div>
 
-    <div class="booking">
-      <div class="card">
+      <form id="bookingForm">
 
-        <form id="bookingForm">
+        <label for="nama">Nama lengkap</label>
+        <input id="nama" required placeholder="Nama Anda">
 
-          <label for="nama">
-            Nama lengkap / Full Name
-          </label>
-          <input
-            id="nama"
-            required
-            placeholder="Masukkan nama Anda"
-          >
+        <label for="nomor">Nomor WhatsApp</label>
+        <input id="nomor" type="tel" required placeholder="08xxxxxxxxxx">
 
-          <label for="nomor">
-            Nomor WhatsApp
-          </label>
-          <input
-            id="nomor"
-            type="tel"
-            required
-            placeholder="08xxxxxxxxxx"
-          >
+        <label for="layanan">Pilih layanan</label>
+        <select id="layanan" required>
+          <option value="">Pilih layanan</option>
+          <option>Private Trip & Tour</option>
+          <option>Indonesia Travel Experience</option>
+          <option>Transportation Service</option>
+          <option>Travel Documentation</option>
+          <option>Corporate Travel & Outing</option>
+          <option>Custom Travel Arrangement</option>
+          <option>Hotel / Travel Partnership</option>
+        </select>
 
-          <label for="layanan">
-            Jenis layanan / Service
-          </label>
+        <label for="asal">Lokasi penjemputan</label>
+        <select id="asal" required>
+          <option value="">Pilih lokasi</option>
+          <option>Gresik</option>
+          <option>Surabaya</option>
+          <option>Sidoarjo</option>
+          <option>Malang</option>
+          <option>Yogyakarta</option>
+          <option>Bali</option>
+          <option>Searah Destinasi</option>
+          <option>Lokasi Lainnya</option>
+        </select>
 
-          <select id="layanan" required>
-            <option value="">Pilih layanan</option>
-            <option>Private Trip & Tour</option>
-            <option>Indonesia Travel Experience</option>
-            <option>Transportation Service</option>
-            <option>Travel Documentation</option>
-            <option>Corporate Travel & Outing</option>
-            <option>Custom Travel Arrangement</option>
-            <option>Hotel / Travel Partnership</option>
-          </select>
+        <label for="tujuan">Tujuan perjalanan</label>
+        <input id="tujuan" required placeholder="Contoh: Bromo, Bali">
 
-          <label for="asal">
-            Lokasi penjemputan / Pickup Location
-          </label>
+        <label for="tanggal">Tanggal perjalanan</label>
+        <input id="tanggal" type="date" required>
 
-          <select id="asal" required>
-            <option value="">Pilih lokasi</option>
-            <option>Gresik</option>
-            <option>Surabaya</option>
-            <option>Sidoarjo</option>
-            <option>Malang</option>
-            <option>Yogyakarta</option>
-            <option>Bali</option>
-            <option>Searah Destinasi</option>
-            <option>Lokasi Lainnya</option>
-          </select>
+        <label for="jumlah">Jumlah peserta</label>
+        <input id="jumlah" type="number" min="1" required placeholder="Jumlah orang">
 
-          <label for="tujuan">
-            Tujuan perjalanan / Destination
-          </label>
-          <input
-            id="tujuan"
-            required
-            placeholder="Contoh: Bromo, Bali, Yogyakarta"
-          >
+        <label for="catatan">Catatan tambahan</label>
+        <textarea id="catatan" rows="4"
+          placeholder="Ceritakan kebutuhan perjalanan atau kerja sama Anda"></textarea>
 
-          <label for="tanggal">
-            Tanggal perjalanan / Travel Date
-          </label>
-          <input id="tanggal" type="date" required>
+        <button type="submit">
+          Hubungi EVERVIA melalui WhatsApp
+        </button>
 
-          <label for="jumlah">
-            Jumlah peserta / Number of Guests
-          </label>
-          <input
-            id="jumlah"
-            type="number"
-            min="1"
-            required
-            placeholder="Jumlah orang"
-          >
+      </form>
+    </section>
 
-          <label for="catatan">
-            Detail kebutuhan / Additional Details
-          </label>
-          <textarea
-            id="catatan"
-            rows="4"
-            placeholder="Ceritakan kebutuhan perjalanan, jumlah hari, kendaraan, dokumentasi, atau kerja sama bisnis Anda."
-          ></textarea>
+  </main>
 
-          <button type="submit">
-            Send Booking via WhatsApp
-          </button>
-
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <div class="brand">
-      EVER<span>VIA</span>
-    </div>
-
+    <h3>EVERVIA</h3>
     <p>Every Journey, A New Story.</p>
-
-    <p>Your Travel & Mobility Partner in Indonesia.</p>
-
     <p>© 2026 EVERVIA. All Rights Reserved.</p>
   </footer>
 
-  <!-- WHATSAPP BOOKING -->
   <script>
-    document
-      .getElementById("bookingForm")
+    document.getElementById("bookingForm")
       .addEventListener("submit", function(e) {
 
-        e.preventDefault();
+      e.preventDefault();
 
-        const nomorWhatsApp = "6281615970761";
+      const nomorWhatsApp = "6281615970761";
 
-        const ambil = id =>
-          document.getElementById(id).value;
+      const ambil = id =>
+        document.getElementById(id).value;
 
-        const pesan = [
-          "Hello EVERVIA, I would like to make an inquiry.",
-          "",
-          "Name: " + ambil("nama"),
-          "WhatsApp: " + ambil("nomor"),
-          "Service: " + ambil("layanan"),
-          "Pickup Location: " + ambil("asal"),
-          "Destination: " + ambil("tujuan"),
-          "Travel Date: " + ambil("tanggal"),
-          "Number of Guests: " + ambil("jumlah"),
-          "Additional Details: " + ambil("catatan")
-        ].join("\n");
+      const pesan = [
+        "Halo EVERVIA, saya ingin bertanya tentang layanan.",
+        "",
+        "Nama: " + ambil("nama"),
+        "WhatsApp: " + ambil("nomor"),
+        "Layanan: " + ambil("layanan"),
+        "Penjemputan: " + ambil("asal"),
+        "Tujuan: " + ambil("tujuan"),
+        "Tanggal: " + ambil("tanggal"),
+        "Jumlah peserta: " + ambil("jumlah"),
+        "Catatan: " + ambil("catatan")
+      ].join("\n");
 
-        const url =
-          "https://wa.me/" +
-          nomorWhatsApp +
-          "?text=" +
-          encodeURIComponent(pesan);
+      const url =
+        "https://wa.me/" + nomorWhatsApp +
+        "?text=" + encodeURIComponent(pesan);
 
-        window.open(url, "_blank");
-      });
+      window.open(url, "_blank");
+    });
 
-    // Tanggal perjalanan tidak boleh sebelum hari ini
-    const tanggalInput =
-      document.getElementById("tanggal");
-
-    const sekarang = new Date();
-    const tahun = sekarang.getFullYear();
-    const bulan = String(
-      sekarang.getMonth() + 1
-    ).padStart(2, "0");
-    const hari = String(
-      sekarang.getDate()
-    ).padStart(2, "0");
-
-    tanggalInput.min =
-      `${tahun}-${bulan}-${hari}`;
   </script>
 
 </body>
